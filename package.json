@@ -1,0 +1,30 @@
+{
+  "name": "powergrid",
+  "version": "0.0.0",
+  "description": "Clean base theme for buttons, forms etc.",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilkkahanninen/powerchord.git"
+  },
+  "keywords": [
+    "css",
+    "stylus",
+    "theme"
+  ],
+  "author": "Ilkka Hänninen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ilkkahanninen/powergrid/issues"
+  },
+  "homepage": "https://github.com/ilkkahanninen/powerchord",
+  "dependencies": {
+    "gulp-stylus": "~2.0.1",
+    "gulp": "~3.8.11",
+    "gulp-minify-css": "~0.4.6",
+    "gulp-rename": "~1.2.0"
+  }
+}

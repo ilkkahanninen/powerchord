@@ -1,0 +1,23 @@
+{
+  "name": "powerchord",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ilkkahanninen/powerchord",
+  "authors": [
+    "Ilkka Hänninen <ilkka.hanninen@gmail.com>"
+  ],
+  "description": "Clean base theme for buttons, forms etc.",
+  "main": "css/powergrid.css",
+  "keywords": [
+    "css",
+    "stylus",
+    "theme"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
