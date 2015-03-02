@@ -316,10 +316,12 @@ select:focus,
   float: left;
   width: 70%;
 }
-.form-group input[type="radio"] {
+.form-group input[type="radio"],
+.form-group input[type="checkbox"] {
   display: none;
 }
-.form-group input[type="radio"] + label {
+.form-group input[type="radio"] + label,
+.form-group input[type="checkbox"] + label {
   position: relative;
   display: inline-block;
   font-size: 100%;
@@ -327,7 +329,8 @@ select:focus,
   padding-left: 28px;
   margin-right: 5px;
 }
-.form-group input[type="radio"] + label:before {
+.form-group input[type="radio"] + label:before,
+.form-group input[type="checkbox"] + label:before {
   content: "";
   display: inline-block;
   width: 14px;
@@ -340,14 +343,26 @@ select:focus,
   box-shadow: rgba(0,0,0,0.1) 0 1px 3px inset;
   text-shadow: rgba(0,0,0,0.1) 0 1px 3px;
   border: 1px solid #d0d0d0;
-  border-radius: 8px;
+  border-radius: 2px;
 }
-.form-group input[type="radio"] + label:hover:before {
+.form-group input[type="radio"] + label:hover:before,
+.form-group input[type="checkbox"] + label:hover:before {
   background: #f2f2f2;
+}
+.form-group input[type="radio"]:checked + label:before,
+.form-group input[type="checkbox"]:checked + label:before {
+  font: sans-serif;
+  content: "\2717";
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+  line-height: 15px;
+}
+.form-group input[type="radio"] + label:before {
+  border-radius: 8px;
 }
 .form-group input[type="radio"]:checked + label:before {
   content: "\25CF";
-  color: #666;
   font-size: 20px;
   text-align: center;
   line-height: 13px;
