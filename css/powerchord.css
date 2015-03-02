@@ -258,8 +258,12 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="number"],
-select {
+select,
+.select-control {
+  appearance: none;
+  -webkit-appearance: none;
   display: block;
+  background: #fff;
   padding: 7px;
   width: 85%;
   box-sizing: border-box;
@@ -273,9 +277,22 @@ select {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="number"]:focus,
-select:focus {
+select:focus,
+.select-control:focus {
   border-color: #61ae24;
   box-shadow: rgba(0,0,0,0.1) 0 1px 3px inset, #61ae24 0 0 5px;
+}
+.select-control {
+  padding: 0;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAvUlEQVRIS+2TsQ3CMBBFXyrqiE0YAdGmhFVoKJEYJhXQwgqMAj0V+ihIp8jEd0EpkOzKls7v2f/siolHNTGfIsgmXCL6KaI5sAV2wPMLaQbsgQNwT9UM9eAKLIEjsElIBG+BBlDtKipYABegTkgs/NHBb1GB6q3kBKzh/Tk/Jx+EC+B5plZy7k6pWLJwr6B/E61d8IjASjRXQ5OZ9/vgicjuUVwaLnj0BtlPNeYVjYLaTdGIwsIiyEb2/xG9AAlzHhmgw6wZAAAAAElFTkSuQmCC") no-repeat right 7px center;
+  background-color: #fff;
+}
+.select-control select {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  width: 100%;
 }
 .form-group {
   margin-bottom: 10px;
@@ -293,7 +310,8 @@ select:focus {
   text-align: right;
 }
 .form-group.inline input,
-.form-group.inline select {
+.form-group.inline select,
+.form-group.inline .select-control {
   float: left;
   width: 70%;
 }

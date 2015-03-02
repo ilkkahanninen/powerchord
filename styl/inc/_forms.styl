@@ -1,3 +1,7 @@
+form_width = 85%
+inline_label_width = 15%
+arrow_down_png_base64 = unquote("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAvUlEQVRIS+2TsQ3CMBBFXyrqiE0YAdGmhFVoKJEYJhXQwgqMAj0V+ihIp8jEd0EpkOzKls7v2f/siolHNTGfIsgmXCL6KaI5sAV2wPMLaQbsgQNwT9UM9eAKLIEjsElIBG+BBlDtKipYABegTkgs/NHBb1GB6q3kBKzh/Tk/Jx+EC+B5plZy7k6pWLJwr6B/E61d8IjASjRXQ5OZ9/vgicjuUVwaLnj0BtlPNeYVjYLaTdGIwsIiyEb2/xG9AAlzHhmgw6wZAAAAAElFTkSuQmCC")
+
 label
   display block
   font-size 80%
@@ -5,10 +9,13 @@ label
   margin-left 8px
   box-sizing border-box
 
-input[type="text"], input[type="email"], input[type="number"], select
+input[type="text"], input[type="email"], input[type="number"], select, .select-control
+  appearance none
+  -webkit-appearance none
   display block
+  background white
   padding 7px
-  width 85%
+  width form_width
   box-sizing border-box
   border-radius 3px
   border 1px solid border_color
@@ -19,16 +26,27 @@ input[type="text"], input[type="email"], input[type="number"], select
     border-color brand_primary
     box-shadow rgba(0,0,0,0.1) 0 1px 3px inset, brand_primary 0 0 5px
 
+.select-control
+  padding 0
+  background url(arrow_down_png_base64) no-repeat right 7px center
+  background-color white  
+  select
+    background transparent
+    border none
+    border-radius 0
+    box-shadow none
+    width 100%
+
 .form-group
   margin-bottom 10px
   &.inline
     clearfix()
     label
       float left
-      width 15%
+      width inline_label_width
       margin 0
       padding 7px 15px 0
       text-align right
-    input, select
+    input, select, .select-control
       float left
-      width 70%
+      width form_width - inline_label_width
