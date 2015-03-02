@@ -1,6 +1,6 @@
 {
   "name": "powerchord",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "https://github.com/ilkkahanninen/powerchord",
   "authors": [
     "Ilkka Hänninen <ilkka.hanninen@gmail.com>"
@@ -19,5 +19,8 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "dependencies": {
+    "powergrid": "~0.3.3"
+  }
 }

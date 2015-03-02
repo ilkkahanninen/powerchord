@@ -1,6 +1,6 @@
 {
   "name": "powergrid",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Clean base theme with buttons, forms etc.",
   "main": "gulpfile.js",
   "scripts": {
