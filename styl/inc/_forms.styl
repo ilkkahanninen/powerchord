@@ -13,12 +13,13 @@ input[type="text"], input[type="email"], input[type="number"], select, .select-c
   appearance none
   -webkit-appearance none
   display block
-  background white
+  background input_background
+  color input_text_color
   padding 7px
   width form_width
   box-sizing border-box
   border-radius 3px
-  border 1px solid border_color
+  border 1px solid input_border_color
   box-shadow rgba(0,0,0,0.1) 0 1px 3px inset
   outline none
   transition box-shadow 300ms, border-color 300ms
@@ -50,3 +51,37 @@ input[type="text"], input[type="email"], input[type="number"], select, .select-c
     input, select, .select-control
       float left
       width form_width - inline_label_width
+
+  input[type="radio"]
+    display none
+    & + label
+      position relative
+      display inline-block
+      font-size 100%
+      cursor pointer
+      padding-left 28px
+      margin-right 5px
+      &:before
+        content ""
+        display inline-block
+        width 14px
+        height 14px
+        margin-right 10px
+        position absolute
+        left 0
+        bottom 2px
+        background input_background
+        box-shadow rgba(0,0,0,0.1) 0 1px 3px inset
+        text-shadow rgba(0,0,0,0.1) 0 1px 3px
+        border 1px solid input_border_color
+        border-radius 8px
+      &:hover
+        &:before
+          background input_background * 0.95
+    &:checked + label:before
+      content "\25CF"
+      color input_text_color
+      font-size 20px
+      text-align center
+      line-height 13px
+

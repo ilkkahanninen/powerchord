@@ -264,6 +264,7 @@ select,
   -webkit-appearance: none;
   display: block;
   background: #fff;
+  color: #666;
   padding: 7px;
   width: 85%;
   box-sizing: border-box;
@@ -314,6 +315,42 @@ select:focus,
 .form-group.inline .select-control {
   float: left;
   width: 70%;
+}
+.form-group input[type="radio"] {
+  display: none;
+}
+.form-group input[type="radio"] + label {
+  position: relative;
+  display: inline-block;
+  font-size: 100%;
+  cursor: pointer;
+  padding-left: 28px;
+  margin-right: 5px;
+}
+.form-group input[type="radio"] + label:before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  background: #fff;
+  box-shadow: rgba(0,0,0,0.1) 0 1px 3px inset;
+  text-shadow: rgba(0,0,0,0.1) 0 1px 3px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+}
+.form-group input[type="radio"] + label:hover:before {
+  background: #f2f2f2;
+}
+.form-group input[type="radio"]:checked + label:before {
+  content: "\25CF";
+  color: #666;
+  font-size: 20px;
+  text-align: center;
+  line-height: 13px;
 }
 hr {
   border: none;
