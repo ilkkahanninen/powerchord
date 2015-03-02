@@ -43,8 +43,11 @@ h6:first-child {
   margin-top: 0;
 }
 a.btn,
+input.btn,
 button,
-input[type="button"] {
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
   display: inline-block;
   cursor: pointer;
   box-sizing: border-box;
@@ -72,8 +75,11 @@ input[type="button"] {
           transition: background 300ms;
 }
 a.btn:hover,
+input.btn:hover,
 button:hover,
-input[type="button"]:hover {
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
   background: #668026;
   background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#74d12b),color-stop(100%,#579d20));
   background: -webkit-linear-gradient(top,#74d12b 0%,#579d20 100%);
@@ -82,8 +88,11 @@ input[type="button"]:hover {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#74d12b', endColorstr='#579d20',GradientType=0 );
 }
 a.btn:hover,
+input.btn:hover,
 button:hover,
-input[type="button"]:hover {
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
   -webkit-transition: background 0ms;
           transition: background 0ms;
 }
@@ -257,8 +266,13 @@ label {
 input[type="text"],
 input[type="email"],
 input[type="number"],
-select {
+select,
+.select-control {
+  appearance: none;
+  -webkit-appearance: none;
   display: block;
+  background: #fff;
+  color: #666;
   padding: 7px;
   width: 85%;
   box-sizing: border-box;
@@ -272,12 +286,76 @@ select {
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="number"]:focus,
-select:focus {
+select:focus,
+.select-control:focus {
   border-color: #61ae24;
   box-shadow: rgba(0,0,0,0.1) 0 1px 3px inset, #61ae24 0 0 5px;
 }
+.select-control {
+  padding: 0;
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAvUlEQVRIS+2TsQ3CMBBFXyrqiE0YAdGmhFVoKJEYJhXQwgqMAj0V+ihIp8jEd0EpkOzKls7v2f/siolHNTGfIsgmXCL6KaI5sAV2wPMLaQbsgQNwT9UM9eAKLIEjsElIBG+BBlDtKipYABegTkgs/NHBb1GB6q3kBKzh/Tk/Jx+EC+B5plZy7k6pWLJwr6B/E61d8IjASjRXQ5OZ9/vgicjuUVwaLnj0BtlPNeYVjYLaTdGIwsIiyEb2/xG9AAlzHhmgw6wZAAAAAElFTkSuQmCC") no-repeat right 7px center;
+  background-color: #fff;
+}
+.select-control select {
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  width: 100%;
+}
 .form-group {
   margin-bottom: 10px;
+}
+.form-group input[type="radio"],
+.form-group input[type="checkbox"] {
+  display: none;
+}
+.form-group input[type="radio"] + label,
+.form-group input[type="checkbox"] + label {
+  position: relative;
+  display: inline-block;
+  font-size: 100%;
+  cursor: pointer;
+  padding-left: 28px;
+  margin-right: 5px;
+}
+.form-group input[type="radio"] + label:before,
+.form-group input[type="checkbox"] + label:before {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+  position: absolute;
+  left: 0;
+  bottom: 2px;
+  background: #fff;
+  box-shadow: rgba(0,0,0,0.1) 0 1px 3px inset;
+  text-shadow: rgba(0,0,0,0.1) 0 1px 3px;
+  border: 1px solid #d0d0d0;
+  border-radius: 2px;
+}
+.form-group input[type="radio"] + label:hover:before,
+.form-group input[type="checkbox"] + label:hover:before {
+  background: #f2f2f2;
+}
+.form-group input[type="radio"]:checked + label:before,
+.form-group input[type="checkbox"]:checked + label:before {
+  font: sans-serif;
+  content: "\2717";
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+  line-height: 15px;
+}
+.form-group input[type="radio"] + label:before {
+  border-radius: 8px;
+}
+.form-group input[type="radio"]:checked + label:before {
+  content: "\25CF";
+  font-size: 20px;
+  text-align: center;
+  line-height: 13px;
 }
 .form-group.inline:after {
   content: "";
@@ -292,9 +370,20 @@ select:focus {
   text-align: right;
 }
 .form-group.inline input,
-.form-group.inline select {
+.form-group.inline select,
+.form-group.inline .select-control {
   float: left;
   width: 70%;
+}
+.form-group.inline input[type="radio"],
+.form-group.inline input[type="checkbox"],
+.form-group.inline input[type="submit"] {
+  width: auto;
+}
+.form-group.inline input[type="radio"] + label,
+.form-group.inline input[type="checkbox"] + label,
+.form-group.inline input[type="submit"] + label {
+  width: auto;
 }
 hr {
   border: none;
