@@ -40,17 +40,6 @@ input[type="text"], input[type="email"], input[type="number"], select, .select-c
 
 .form-group
   margin-bottom 10px
-  &.inline
-    clearfix()
-    label
-      float left
-      width inline_label_width
-      margin 0
-      padding 7px 15px 0
-      text-align right
-    input, select, .select-control
-      float left
-      width form_width - inline_label_width
 
   input[type="radio"], input[type="checkbox"]
     display none
@@ -94,3 +83,20 @@ input[type="text"], input[type="email"], input[type="number"], select, .select-c
       font-size 20px
       text-align center
       line-height 13px
+
+  &.inline
+    clearfix()
+    label
+      float left
+      width inline_label_width
+      margin 0
+      padding 7px 15px 0
+      text-align right
+    input, select, .select-control
+      float left
+      width form_width - inline_label_width
+
+    input[type="radio"], input[type="checkbox"]
+      width auto
+      & + label
+        width auto

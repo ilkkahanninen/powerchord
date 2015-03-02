@@ -298,24 +298,6 @@ select:focus,
 .form-group {
   margin-bottom: 10px;
 }
-.form-group.inline:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.form-group.inline label {
-  float: left;
-  width: 15%;
-  margin: 0;
-  padding: 7px 15px 0;
-  text-align: right;
-}
-.form-group.inline input,
-.form-group.inline select,
-.form-group.inline .select-control {
-  float: left;
-  width: 70%;
-}
 .form-group input[type="radio"],
 .form-group input[type="checkbox"] {
   display: none;
@@ -366,6 +348,32 @@ select:focus,
   font-size: 20px;
   text-align: center;
   line-height: 13px;
+}
+.form-group.inline:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.form-group.inline label {
+  float: left;
+  width: 15%;
+  margin: 0;
+  padding: 7px 15px 0;
+  text-align: right;
+}
+.form-group.inline input,
+.form-group.inline select,
+.form-group.inline .select-control {
+  float: left;
+  width: 70%;
+}
+.form-group.inline input[type="radio"],
+.form-group.inline input[type="checkbox"] {
+  width: auto;
+}
+.form-group.inline input[type="radio"] + label,
+.form-group.inline input[type="checkbox"] + label {
+  width: auto;
 }
 hr {
   border: none;
