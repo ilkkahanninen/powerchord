@@ -1,12 +1,12 @@
 {
   "name": "powerchord",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "homepage": "https://github.com/ilkkahanninen/powerchord",
   "authors": [
     "Ilkka Hänninen <ilkka.hanninen@gmail.com>"
   ],
   "description": "Clean base theme with buttons, forms etc.",
-  "main": "css/powergrid.css",
+  "main": "css/powerchord.css",
   "keywords": [
     "css",
     "stylus",
@@ -21,6 +21,6 @@
     "tests"
   ],
   "dependencies": {
-    "powergrid": "~0.3.3"
+    "powergrid": "*"
   }
 }
