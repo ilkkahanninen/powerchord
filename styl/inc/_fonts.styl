@@ -1,5 +1,7 @@
-for family, sizes in google_fonts
-  @import url('http://fonts.googleapis.com/css?family=' + family + ':' + sizes)
-
 body
-  font-family keys(pop(google_fonts)), sans-serif
+  _fonts = google_fonts
+  _font = pop(keys(_fonts))
+  if _font
+    font-family _font, fallback_fonts
+  else
+    font-family fallback_fonts
