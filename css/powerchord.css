@@ -287,7 +287,8 @@ input[type="password"],
 input[type="email"],
 input[type="number"],
 select,
-.select-control {
+.select-control,
+textarea {
   appearance: none;
   -webkit-appearance: none;
   display: block;
@@ -308,7 +309,8 @@ input[type="password"]:focus,
 input[type="email"]:focus,
 input[type="number"]:focus,
 select:focus,
-.select-control:focus {
+.select-control:focus,
+textarea:focus {
   border-color: #61ae24;
   box-shadow: rgba(0,0,0,0.1) 0 1px 3px inset, #61ae24 0 0 5px;
 }
@@ -392,7 +394,8 @@ select:focus,
 }
 .form-group.inline input,
 .form-group.inline select,
-.form-group.inline .select-control {
+.form-group.inline .select-control,
+.form-group.inline textarea {
   float: left;
   width: 70%;
 }
