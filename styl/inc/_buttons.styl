@@ -1,7 +1,10 @@
-hover-color(color)
+hover-color(color, hover)
   gradient(color * 1.05, color * 0.95)
   &:hover
-    gradient(color * 1.2, color * 0.9)
+    if hover
+      gradient(color * 1.2, color * 0.9)
+    else
+      gradient(color * 1.05, color * 0.95)
 
 a.btn, input.btn, button, input[type="button"], input[type="submit"], input[type="reset"]
   display inline-block
@@ -20,12 +23,17 @@ a.btn, input.btn, button, input[type="button"], input[type="submit"], input[type
   background none
   box-shadow rgba(0,0,0,0.1) 0 1px 2px
   text-shadow rgba(0,0,0,0.3) 0 1px 2px
-  hover-color(brand_primary)
+  hover-color(brand_primary, true)
   color btn_text_color
   transition background 300ms
   &:hover
     transition background 0ms
+  &:disabled
+    hover-color(brand_primary, false)
+    opacity 0.5
 
 for name, color in btn_colors
   .btn-{name}
-    hover-color(color)
+    hover-color(color, true)
+    &:disabled
+      hover-color(color, false)
