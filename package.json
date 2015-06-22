@@ -1,6 +1,6 @@
 {
   "name": "powerchord",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Clean base theme with buttons, forms etc.",
   "main": "gulpfile.js",
   "scripts": {
